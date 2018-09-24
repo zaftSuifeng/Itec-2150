@@ -1,0 +1,75 @@
+package homework_2;
+
+import java.io.FileNotFoundException;
+import java.nio.file.FileAlreadyExistsException;
+import java.util.ArrayList;
+import java.util.Scanner;
+
+/**
+ * @author david
+ *
+ */
+public class CardTester 
+{
+	
+	
+
+	public static void main(String[] args)
+	{
+		Scanner input = new Scanner(System.in);
+		CardDeck cd = new CardDeck();
+		CardTester ct = new CardTester();
+		ArrayList<String> deck = new ArrayList<String>();
+		deck = cd.cardDeck();
+		String fileName = "unshuffled.cards";
+		try
+		{
+			try {
+				cd.saveDeck(fileName);
+			} 
+			catch (FileNotFoundException e)
+			{
+			
+			}
+		}
+		catch (FileAlreadyExistsException e)
+		{
+			
+		}
+		
+		System.out.println("The new deck.\n");
+		System.out.println(cd.toString());
+		deck = cd.shuffle();
+		fileName = "shuffled.cards";
+		try
+		{
+			try {
+				cd.saveDeck(fileName);
+			} 
+			catch (FileNotFoundException e)
+			{
+			
+			}
+		}
+		catch (FileAlreadyExistsException e)
+		{
+			
+		}
+		System.out.println("\nThe shuffled deck.\n");
+		System.out.println(cd.toString());
+		
+		
+//		String fileName = ct.input.nextLine();
+//		cd.saveDeck(fileName);
+//		ct.print(deck);
+//		cd.shuffle();
+	}
+	
+	/** Method: print
+	 *  Create and initialize the instance of print
+	 *  Print the ArrayList line by line
+	 * @param lines
+	 */
+	
+
+}
