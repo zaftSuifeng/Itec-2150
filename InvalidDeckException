@@ -1,0 +1,20 @@
+package homework_2;
+
+/**
+ * @author david
+ *
+ */
+@SuppressWarnings("serial")
+public class InvalidDeckException extends Exception
+{
+	public InvalidDeckException()
+	{
+		
+	}
+	
+	public InvalidDeckException(String msg)
+	{
+		super(msg);
+	}
+
+}
